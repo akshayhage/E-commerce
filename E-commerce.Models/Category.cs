@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace E_commerceWeb.Models
+namespace E_commerce.Models
 {
     public class Category
     {
@@ -13,8 +13,8 @@ namespace E_commerceWeb.Models
         [DisplayName("Category Name")]
         public string Name { get; set; }
         [DisplayName("Display Order")]
-        [Range(1,100,ErrorMessage ="Display Order Value is not valid")]
-       
+        [Range(1, 100, ErrorMessage = "Display Order Value is not valid")]
+
         public int DisplayOrder { get; set; }
 
     }
