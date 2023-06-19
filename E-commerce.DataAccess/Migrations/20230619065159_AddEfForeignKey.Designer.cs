@@ -3,6 +3,7 @@ using E_commerce.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_commerce.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230619065159_AddEfForeignKey")]
+    partial class AddEfForeignKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,10 +88,6 @@ namespace E_commerce.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<double>("ListPrice")
                         .HasColumnType("float");
 
@@ -119,7 +118,6 @@ namespace E_commerce.DataAccess.Migrations
                             CategoryId = 1,
                             Description = "‘Failure will never overtake me if my determination to succeed is strong enough.’ Oftentimes, our desire to succeed doesn’t account for the failure, when in fact, failing at something can teach us the most about how to succeed.",
                             ISBN = "SWD9999001",
-                            ImageUrl = "",
                             ListPrice = 99.0,
                             Price = 90.0,
                             Price100 = 80.0,
@@ -133,7 +131,6 @@ namespace E_commerce.DataAccess.Migrations
                             CategoryId = 1,
                             Description = "It is a practical, direct-action application of spiritual techniques to overcome defeat and win confidence, success, and joy. Norman Vincent Peale, the father of positive thinking and one of the most widely read inspirational writers of all time, shares his famous formula of faith and optimism which millions of people have taken as their own simple and effective philosophy of living.",
                             ISBN = "CAW777777701",
-                            ImageUrl = "",
                             ListPrice = 40.0,
                             Price = 30.0,
                             Price100 = 20.0,
@@ -147,7 +144,6 @@ namespace E_commerce.DataAccess.Migrations
                             CategoryId = 1,
                             Description = "This book explores the nature of stress and how it infiltrates every level of your life, including the physical, emotional, cognitive, relational, and even spiritual. Through techniques that get to the heart of your unique stress response and an exploration of how stress can affect your relationships, you will discover how to control stress instead of letting it control you.",
                             ISBN = "RITO5555501",
-                            ImageUrl = "",
                             ListPrice = 55.0,
                             Price = 50.0,
                             Price100 = 35.0,
@@ -161,7 +157,6 @@ namespace E_commerce.DataAccess.Migrations
                             CategoryId = 2,
                             Description = "This book shows you how you become what you contemplate, why hard work alone will not bring success, how to bring the subconscious into practical action, how to turn your thoughts into achievements, and how belief makes things happen",
                             ISBN = "WS3333333301",
-                            ImageUrl = "",
                             ListPrice = 70.0,
                             Price = 65.0,
                             Price100 = 55.0,
@@ -175,7 +170,6 @@ namespace E_commerce.DataAccess.Migrations
                             CategoryId = 2,
                             Description = "In this book, the author fuses his spiritual wisdom and scientific research to bring to light how the subconscious mind can be a major influence on our daily lives. Once you understand your subconscious mind, you can also control or get rid of the various phobias that you may have in turn opening a brand new world of positive energy.",
                             ISBN = "SOTJ1111111101",
-                            ImageUrl = "",
                             ListPrice = 30.0,
                             Price = 27.0,
                             Price100 = 20.0,
