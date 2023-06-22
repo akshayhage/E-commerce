@@ -22,7 +22,7 @@ namespace E_commerce.DataAccess.Repository
         {
             var objFormDb = _db.Products
                 .FirstOrDefault(x => x.Id == product.Id);
-            if(objFormDb!=null)
+            if (objFormDb != null)
             {
                 objFormDb.Id = product.Id;
                 objFormDb.Title = product.Title;
@@ -33,14 +33,14 @@ namespace E_commerce.DataAccess.Repository
                 objFormDb.Price = product.Price;
                 objFormDb.Price100 = product.Price100;
                 objFormDb.Price50 = product.Price50;
-                if(objFormDb.ImageUrl!=null)
+                if (objFormDb.ImageUrl != null)
                 {
                     objFormDb.ImageUrl = product.ImageUrl;
                 }
 
             }
 
-            _db.Products.Update(product);
+            _db.Products.Update(objFormDb); 
         }
     }
 }

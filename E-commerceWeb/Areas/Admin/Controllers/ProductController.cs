@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Runtime.Intrinsics.X86;
 
+
 namespace E_commerceWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]

@@ -38,7 +38,7 @@ namespace E_commerce.DataAccess.Repository
                     query = query.Include(includeProp);
                 }
             }
-            query =query.Where(filter);
+            query = query.Where(filter);
             return query.FirstOrDefault();
         }
 
